@@ -23,12 +23,7 @@ https://github.com/ITU-DASYALab/roof/tree/main/solar/ina
 
 ### Lopy - micropython
 
-Start with IoT course guides:
-
-https://github.com/ITU-DASYALab/IoT_course/blob/main/guides/archive/gettingStartedWithPycom.md
-
-https://github.com/ITU-DASYALab/IoT_course/blob/main/guides/archive/lopyLoRa%26TTN.md
-
+Start with IoT course guides linked below,
 and pycom documentation:
 
 https://docs.pycom.io/
@@ -39,7 +34,8 @@ Note: the compnay no longer exists, so how long this will be there is anybody's 
 
 Steps:
 
-  * hello world
-  * read I2C sensors
-  * LoRa / TTN
+  * hello world - 
+https://github.com/ITU-DASYALab/IoT_course/blob/main/guides/archive/gettingStartedWithPycom.md
+  * read I2C sensors - see https://github.com/ITU-DASYALab/IoT_course/blob/main/exercises/archive_2022/exercise-03-sensors.md
+  * LoRa / TTN - https://github.com/ITU-DASYALab/IoT_course/blob/main/guides/archive/lopyLoRa%26TTN.md
 
