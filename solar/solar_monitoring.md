@@ -29,6 +29,14 @@ https://github.com/ITU-DASYALab/IoT_course/blob/main/guides/archive/gettingStart
 
 https://github.com/ITU-DASYALab/IoT_course/blob/main/guides/archive/lopyLoRa%26TTN.md
 
+and pycom documentation:
+
+https://docs.pycom.io/
+
+Note: the compnay no longer exists, so how long this will be there is anybody's guess ...
+
+
+
 Steps:
 
   * hello world
