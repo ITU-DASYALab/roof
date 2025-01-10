@@ -1,0 +1,84 @@
+a typical reading
+
+Bus Voltage:   13.87 V
+Shunt Voltage: 0.28 mV
+Load Voltage:  13.87 V
+Current:       2.70 mA
+Power:         40.00 mW
+
+real life upper limits
+
+Bus Voltage:   25 V
+Shunt Voltage: 1.00 mV
+Load Voltage:  25 V
+Current:       1000 mA
+Power:         25000 mW
+
+What are good formats to send?
+
+value		unit		range		bytes
+Bus Voltage:   	mV		0 ... 25000	2
+Shunt Voltage: 	uV		0 ... 1000	2
+Load Voltage:  	mV		0 ... 25000	2
+Current:       	mA		0 ... 1000	2
+Power:         	mW		0 ... 25000	2	
+
+with that
+
+
+Bus Voltage:   8320.00 mV
+Shunt Voltage: 400.00 uV
+Load Voltage:  8320.00 mV
+Current:       4.00 mA
+Power:         36.00 mW
+
+all of those
+
+int - rounded
+
+
+encoding in ino:
+
+-------------------------------------------------------------------------------------
+byte payload[6];
+payload[0] = highByte(busvoltage);
+payload[1] = lowByte(busvoltage);
+payload[2] = highByte(loadvoltage);
+payload[3] = lowByte(loadvoltage);
+payload[4] = highByte(current);
+payload[5] = lowByte(current);
+payload[6] = highByte(power);
+payload[7] = lowByte(power);
+
+// Send it off
+ttn.sendBytes(payload, sizeof(payload));
+-------------------------------------------------------------------------------------
+
+
+
+
+
+
+decoding in TTN app:
+
+
+
+function Decoder(bytes, port) {
+  // Decode an uplink message from a buffer
+  // (array) of bytes to an object of fields.
+  var decoded = {};
+        
+ decoded.busvoltage = (bytes[0] << 8)
+              + bytes[1];
+ decoded.loadvoltage = (bytes[2] << 8)
+              + bytes[3];
+ decoded.current = (bytes[4] << 8)
+              + bytes[5];
+decoded.power = (bytes[6] << 8)
+              + bytes[7];
+        
+  return decoded;
+}
+
+
+
