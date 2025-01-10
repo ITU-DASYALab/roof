@@ -18,3 +18,20 @@ https://learn.adafruit.com/adafruit-ina260-current-voltage-power-sensor-breakout
 ### Things Uno - Arduino
 
 exists - code is in 
+
+https://github.com/ITU-DASYALab/roof/tree/main/solar/ina
+
+### Lopy - micropython
+
+Start with IoT course guides:
+
+https://github.com/ITU-DASYALab/IoT_course/blob/main/guides/archive/gettingStartedWithPycom.md
+
+https://github.com/ITU-DASYALab/IoT_course/blob/main/guides/archive/lopyLoRa%26TTN.md
+
+Steps:
+
+  * hello world
+  * read I2C sensors
+  * LoRa / TTN
+
